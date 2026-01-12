@@ -16,7 +16,7 @@ function main() {
   clearCanvas();
 
 
-  let v1 = new Vector3([2.00, 2.00, 0]);
+  let v1 = new Vector3([2.25, 2.25, 0]);
   drawVector(v1, "red");
  
   // hook up buttons
