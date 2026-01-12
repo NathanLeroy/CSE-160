@@ -15,10 +15,10 @@ function main() {
   // black background
   clearCanvas();
 
-  // default v1 (2.25, 2.25, 0)
-  let v1 = new Vector3([2.25, 2.25, 0]);
-  drawVector(v1, "red");
 
+  let v1 = new Vector3([2.00, 2.00, 0]);
+  drawVector(v1, "red");
+ 
   // hook up buttons
   document.getElementById("drawBtn").onclick = handleDrawEvent;
   document.getElementById("opBtn").onclick = handleDrawOperationEvent;
