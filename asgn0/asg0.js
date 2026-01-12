@@ -1,7 +1,7 @@
 let canvas, ctx;
 
-const SCALE = 20;          // scale vector coords by 20 for visibility
-const ORIGIN_X = 200;      // center of 400x400 canvas
+const SCALE = 20; // scale vector coords by 20 for visibility
+const ORIGIN_X = 200; // center of 400x400 canvas
 const ORIGIN_Y = 200;
 
 function main() {
