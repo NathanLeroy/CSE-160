@@ -69,6 +69,8 @@ function main() {
   setupWebGL();
   connectVariablesToGLSL();
 
+  addActionsForHtmlUI();
+
 
   // Register function (event handler) to be called on a mouse press
   canvas.onmousedown = click;
