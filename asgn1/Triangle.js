@@ -114,8 +114,14 @@ function drawBunny() {
   drawTriangle([0.6, 0.1,  0.75, 0.1,  0.6, 0.25]);
 
   // Yellow rectangles (L for Leroy)
-  gl.uniform4f(u_FragColor, 1.0, 1.0, 0.0, 1);
-  drawRect(0.75, 0.1, 0.9, 0.25);
+  //gl.uniform4f(u_FragColor, 1.0, 1.0, 0.0, 1);
+  //drawRect(0.75, 0.1, 0.9, 0.25);
   //drawRect(0.9,  0.1, 1.05, 0.25);
+  gl.uniform4f(u_FragColor, 1.0, 1.0, 0.0, 1);
+  drawRect(0.75, 0.1, 0.80, 0.25);  
+  drawRect(0.75, 0.1, 0.88, 0.15);
+
+
+  //drawRect(0.85, -0.1, 0.95, 0.25);  
 
 }
