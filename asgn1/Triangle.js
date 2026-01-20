@@ -59,7 +59,7 @@ function drawTriangle(vertices) {
   //}
 
   //REMOVE IF STILL BREAKING PROGRAM
-  gl.disableVertexAttribArray(a_Position);
+  //gl.disableVertexAttribArray(a_Position);
   // Assign the buffer object to a_Position variable
   gl.vertexAttribPointer(a_Position, 2, gl.FLOAT, false, 0, 0);
   
