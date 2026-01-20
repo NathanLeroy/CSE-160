@@ -70,7 +70,8 @@ let g_selectedSize=5;
 function addActionsForHtmlUI(){
     document.getElementById('green').onclick = function() {g_selectedColor = [0.0,1.0,0.0,1.0];};
     document.getElementById('red').onclick = function() {g_selectedColor = [1.0,0.0,0.0,1.0];};
-
+    document.getElementById('clearButton').onclick = function() {g_shapesList=[]; };
+    
     document.getElementById('redSlide').addEventListener('mouseup', function() { g_selectedColor[0] = this.value/100; });
     document.getElementById('greenSlide').addEventListener('mouseup', function() { g_selectedColor[1] = this.value/100; });
     document.getElementById('blueSlide').addEventListener('mouseup', function() { g_selectedColor[2] = this.value/100; });
@@ -96,15 +97,6 @@ function main() {
   gl.clear(gl.COLOR_BUFFER_BIT);
 }
 
-
-class Point{
-    constructor(){
-        this.type = 'point';
-        this.position = [0.0,0.0,0.0];
-        this.color = [1.0,1.0,1.0,1.0];
-        this.size = 5.0;
-    }
-}
 
 var g_shapesList = [];
 //var g_points = [];  // The array for the position of a mouse press
@@ -158,21 +150,8 @@ function renderAllShapes(){
   //var len = g_points.length;
   var len = g_shapesList.length;
   for(var i = 0; i < len; i++) {
-    var xy = g_shapesList[i].position;
-    var rgba = g_shapesList[i].color;
-    var size = g_shapesList[i].size;
-    //var xy = g_points[i];
-    //var rgba = g_colors[i];
-    //var size = g_sizes[i];
 
-    // Pass the position of a point to a_Position variable
-    gl.vertexAttrib3f(a_Position, xy[0], xy[1], 0.0);
-    // Pass the color of a point to u_FragColor variable
-    gl.uniform4f(u_FragColor, rgba[0], rgba[1], rgba[2], rgba[3]);
-
-    gl.uniform1f(u_Size, size);
-    // Draw
-    gl.drawArrays(gl.POINTS, 0, 1);
+    g_shapesList.render();
   }
 
 }
