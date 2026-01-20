@@ -72,11 +72,11 @@ function addActionsForHtmlUI(){
     document.getElementById('red').onclick = function() {g_selectedColor = [1.0,0.0,0.0,1.0];};
     document.getElementById('clearButton').onclick = function() {g_shapesList=[]; };
 
-    document.getElementById('redSlide').addEventListener('input', function() { g_selectedColor[0] = this.value/100; });
-    document.getElementById('greenSlide').addEventListener('input', function() { g_selectedColor[1] = this.value/100; });
-    document.getElementById('blueSlide').addEventListener('input', function() { g_selectedColor[2] = this.value/100; });
+    document.getElementById('redSlide').addEventListener('mouseup', function() { g_selectedColor[0] = this.value/100; });
+    document.getElementById('greenSlide').addEventListener('mouseup', function() { g_selectedColor[1] = this.value/100; });
+    document.getElementById('blueSlide').addEventListener('mouseup', function() { g_selectedColor[2] = this.value/100; });
 
-    document.getElementById('sizeSlide').addEventListener('input', function() { g_selectedSize = this.value; });
+    document.getElementById('sizeSlide').addEventListener('mouseup', function() { g_selectedSize = this.value; });
 }
 
 function main() {
