@@ -67,6 +67,7 @@ function connectVariablesToGLSL(){
 
 const POINT = 0;
 const TRIANGLE = 1;
+const CIRCLE = 2;
 
 let g_selectedColor=[1.0,1.0,1.0,1.0];
 let g_selectedSize=5;
