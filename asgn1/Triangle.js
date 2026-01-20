@@ -1,4 +1,4 @@
-class Point{
+class Triangle{
     constructor(){
         this.type = 'triangle';
         this.position = [0.0,0.0,0.0];

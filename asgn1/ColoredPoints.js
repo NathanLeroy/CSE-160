@@ -6,7 +6,7 @@ var VSHADER_SOURCE =
   'void main() {\n' +
   '  gl_Position = a_Position;\n' +
   '  gl_PointSize = u_Size;\n' +
-  '}\n';
+  '}\n'; 
 
 // Fragment shader program
 var FSHADER_SOURCE =
