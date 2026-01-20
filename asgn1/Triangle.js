@@ -56,8 +56,12 @@ function drawTriangle(vertices) {
   //  console.log('Failed to get the storage location of a_Position');
   //  return -1;
   //}
+
+  //REMOVE IF STILL BREAKING PROGRAM
+  gl.disableVertexAttribArray(a_Position);
   // Assign the buffer object to a_Position variable
   gl.vertexAttribPointer(a_Position, 2, gl.FLOAT, false, 0, 0);
+  
 
   // Enable the assignment to a_Position variable
   gl.enableVertexAttribArray(a_Position);
