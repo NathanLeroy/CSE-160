@@ -87,6 +87,9 @@ function addActionsForHtmlUI(){
     document.getElementById('blueSlide').addEventListener('mouseup', function() { g_selectedColor[2] = this.value/100; });
 
     document.getElementById('sizeSlide').addEventListener('mouseup', function() { g_selectedSize = this.value; });
+
+    // bunny function
+    document.getElementById('bunnyButton').onclick = function() { drawBunny(); };
 }
 
 function main() {
