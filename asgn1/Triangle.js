@@ -79,43 +79,43 @@ function drawRect(x1, y1, x2, y2) {
 
 function drawBunny() {
 
-  // ===== BODY (WHITE) =====
+  // White Body
   gl.uniform4f(u_FragColor, 1, 1, 1, 1);
   drawRect(-0.6, -0.6,  0.6,  0.1);
 
-  // ===== HEAD (WHITE) =====
+  // White Head
   drawRect(-0.3, 0.1, 0.3, 0.45);
 
-  // ===== EARS (WHITE OUTER) =====
+  // White Outer Ear
   drawRect(-0.25, 0.45, -0.1, 0.85);
   drawRect( 0.1,  0.45,  0.25, 0.85);
 
-  // ===== EARS (PINK INNER) =====
+  // Pink Inner Ear
   gl.uniform4f(u_FragColor, 1.0, 0.7, 0.8, 1);
   drawRect(-0.22, 0.5, -0.13, 0.8);
   drawRect( 0.13, 0.5,  0.22, 0.8);
 
-  // ===== EYES (WHITE) =====
-  gl.uniform4f(u_FragColor, 1, 1, 1, 1);
+  // Black Eyes
+  gl.uniform4f(u_FragColor, 0, 0, 0, 1);
   drawRect(-0.2, 0.3, -0.15, 0.35);
   drawRect( 0.15, 0.3,  0.2,  0.35);
 
-  // ===== NOSE (BLACK TRIANGLE) =====
+  // Black Nose
   gl.uniform4f(u_FragColor, 0, 0, 0, 1);
   drawTriangle([-0.05, 0.25,  0.05, 0.25,  0.0, 0.18]);
 
-  // ===== SIDE BLOCKS =====
-  // Blue triangle
-  gl.uniform4f(u_FragColor, 0.2, 0.4, 1.0, 1);
-  drawTriangle([0.6, 0.1,  0.75, 0.1,  0.6, 0.25]);
-
-  // Yellow rectangles
-  gl.uniform4f(u_FragColor, 1.0, 1.0, 0.0, 1);
-  drawRect(0.75, 0.1, 0.9, 0.25);
-  drawRect(0.9,  0.1, 1.05, 0.25);
-
-  // ===== FEET (OFF-WHITE) =====
+  // Off-White Feet
   gl.uniform4f(u_FragColor, 0.95, 0.95, 0.95, 1);
   drawRect(-0.55, -0.6, -0.35, -0.4);
   drawRect( 0.35, -0.6,  0.55, -0.4);
+
+  // Blue triangle (N for Nathan)
+  gl.uniform4f(u_FragColor, 0.2, 0.4, 1.0, 1);
+  drawTriangle([0.6, 0.1,  0.75, 0.1,  0.6, 0.25]);
+
+  // Yellow rectangles (L for Leroy)
+  gl.uniform4f(u_FragColor, 1.0, 1.0, 0.0, 1);
+  drawRect(0.75, 0.1, 0.9, 0.25);
+  //drawRect(0.9,  0.1, 1.05, 0.25);
+
 }
