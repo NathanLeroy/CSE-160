@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Change a point color</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+    Please use a browser that supports "canvas"
+    </canvas>
+
+    <p id="fpsDisplay"> FPS: -- </p>
+    <button type = "button" id="green">XXX</button>
+    <button type = "button" id="red">XXX</button>
+
+    <button type = "button" id="clearButton">XXX</button>
+
+    <button type = "button" id="pointButton">XXX</button>
+    <button type = "button" id="triButton">XXX</button>
+    <button type = "button" id="circleButton">XXX</button>
+    <button type = "button" id="bunnyButton">XXX</button>
+
+    <p>
+    Red <input type="range" min="0" max="100" value="100" class="slider" id="redSlide">
+    <p>
+    Green <input type="range" min="0" max="100" value="0" class="slider" id="greenSlide">
+    <p>
+    Blue <input type="range" min="0" max="100" value="0" class="slider" id="blueSlide">
+    <p> 
+    Size <input type="range" min="5" max="40" value="5" class="slider" id="sizeSlide">
+    <p>
+    
+    <p>
+    Camera Angle <input type = "range" min="0" max="90" value="5" class="slider" id="angleSlide">
+    </p>
+
+    <p>
+    Left Arm 2 Angle <input type="range" min="-25" max="8" value="8" class="slider" id="leftArm2AngleSlide">
+    </p>
+
+    <p>
+    Left Fist Angle <input type="range" min="-20" max="20" value="0" class="slider" id="leftFistAngleSlide">
+    </p>
+
+    <p>
+    <button type="button" id="animOnButton">Animation ON</button>
+    <button type="button" id="animOffButton">Animation OFF</button>
+    </p>
+
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix-cse160.js"></script>
+
+    <script src="Point.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Circle.js"></script>
+    <script src="Cube.js"></script>
+    <script src="Cone.js"></script>
+    <script src="blockyAnimal.js"></script>
+
+  </body>
+</html>
