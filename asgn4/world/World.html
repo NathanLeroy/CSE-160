@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Lava Pool Maze - Phong Lighting</title>
+  </head>
+
+  <body onload="main()">
+    <p>
+      PA4
+    </p>
+
+    <canvas id="webgl" width="400" height="400">
+      Please use a browser that supports "canvas"
+    </canvas>
+
+    <p id="fpsDisplay">FPS: --</p>
+
+    <div class="row">
+      <button type="button" id="toggleLightingBtn">Lighting: ON</button>
+      <button type="button" id="toggleNormalsBtn">Normals: OFF</button>
+      <button type="button" id="toggleLightAnimBtn">Light Spin: OFF</button>
+      <button type="button" id="toggleSpotBtn">Spotlight: OFF</button>
+    </div>
+
+    <div class="row">
+      Light X
+      <input type="range" min="-10" max="10" value="2" step="0.1" class="slider" id="lightX">
+      <span id="lightXVal">2</span>
+    </div>
+    <div class="row">
+      Light Y
+      <input type="range" min="-10" max="10" value="2" step="0.1" class="slider" id="lightY">
+      <span id="lightYVal">2</span>
+    </div>
+    <div class="row">
+      Light Z
+      <input type="range" min="-10" max="10" value="2" step="0.1" class="slider" id="lightZ">
+      <span id="lightZVal">2</span>
+    </div>
+
+    <div class="row">
+      Light Color (R)
+      <input type="range" min="0" max="1" value="1" step="0.01" class="slider" id="lightR">
+      <span id="lightRVal">1</span>
+    </div>
+    <div class="row">
+      Light Color (G)
+      <input type="range" min="0" max="1" value="1" step="0.01" class="slider" id="lightG">
+      <span id="lightGVal">1</span>
+    </div>
+    <div class="row">
+      Light Color (B)
+      <input type="range" min="0" max="1" value="1" step="0.01" class="slider" id="lightB">
+      <span id="lightBVal">1</span>
+    </div>
+
+    <div class="row">
+      Global Rotate
+      <input type="range" min="0" max="360" value="0" step="1" class="slider" id="angleSlide">
+      <span id="angleVal">0</span>
+    </div>
+
+    <hr>
+
+
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix-cse160.js"></script>
+
+    <script src="Triangle.js"></script>
+    <script src="Cube.js"></script>
+    <script src="Sphere.js"></script>
+    <script src="Camera.js"></script>
+    <script src="World.js"></script>
+  </body>
+</html>
