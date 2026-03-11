@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Three.js World</title>
+
+<style>
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+}
+</style>
+
+</head>
+
+<p> Find the trophy! Use your mouse to click and drag to change the camera, and scroll forwards and backwards to change the FOV.</p>
+<body>
+
+<canvas id="c"></canvas>
+
+
+<script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+      }
+    }
+    </script>
+
+
+
+<script type="module" src="main.js"></script>
+
+</body>
+</html>
